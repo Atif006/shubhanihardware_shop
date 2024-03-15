@@ -17,7 +17,6 @@ const AdminRegister = async (req, res) => {
   }
 };
 const AdminLogin = async (req, res) => {
-  console.log("login credential ", req.body);
   let { email, password } = req.body;
   try {
     let user = await services.findUserByEmail(email);
