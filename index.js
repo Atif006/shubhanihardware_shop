@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, "./shubhaniFrontend1/build")));
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./shubhaniFrontend1/build/index.html"));
 });
-const port = process.env.REACT_APP_PORT;
+const port = process.env.REACT_APP_PORT || 8080;
 
 app.listen(port, async () => {
   await dbConnect();
